@@ -14,17 +14,17 @@ class Neighborhood {
       store.neighborhoods.push(this);
     }
     deliveries() {
-    return store.deliveries.filter(delivery => delivery.neighborhoodId === this.id);
+      return store.deliveries.filter(delivery => delivery.neighborhoodId === this.id);
     }
 
-   customers() {
-    return store.customers.filter(customer => customer.neighborhoodId = this.id);
-   }
+    customers() {
+      return store.customers.filter(customer => customer.neighborhoodId = this.id);
+    }
 
-   meals() {
-    let meals = this.customers().map(customer => {return customer.meals()});
+    meals() {
+    let meals = this.customers().map(customer => customer.meals());
     return [...new Set(meals[0])];
-  }
+    }
     
     
 }
