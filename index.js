@@ -60,7 +60,7 @@ class Customer {
     }
     totalSpent(){
       let prices = this.meals().map(meal=> meal.price);
-      return prices.reduce((total, amount) => total + amount, 0)
+      return prices.reduce((total, amount) => total + amount, 0);
     }
 }
 
