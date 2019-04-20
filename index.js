@@ -48,3 +48,26 @@ class Meal {
       return store.meals.sort(function(a, b) {return b.price - a.price});
     }
 }
+
+class Customer {
+    constructor(name, neighborhood) {
+        this.id = ++customerId;
+        this.name = name;
+        this.neighborhoodId = neighborhood;
+        store.customers.push(this);
+    }
+    deliveries() {
+      return store.deliveries.filter(delivery => {
+      return delivery.customerId === this.id;})
+    }
+    meals() {
+    return this.deliveries().map(delivery => {
+      return delivery.meal();})
+    }
+   totalSpent(){
+    let prices = this.meals().map(function(meal){return meal.price})
+    return prices.reduce((total, amount) => total + amount, 0)
+
+   }
+}
+
