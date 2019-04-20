@@ -13,7 +13,19 @@ class Neighborhood {
       this.name = name;
       store.neighborhoods.push(this);
     }
-    
+    deliveries() {
+    return store.deliveries.filter(delivery => delivery.neighborhoodId === this.id);
+    }
+
+   customers() {
+    return store.customers.filter(customer => {
+      return customer.neighborhoodId = this.id ;})
+  }
+
+   meals() {
+    let meals = this.customers().map(customer => {return customer.meals()});
+    return [...new Set(meals[0])];
+  }
     
     
 }
