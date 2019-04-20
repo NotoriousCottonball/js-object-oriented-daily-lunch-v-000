@@ -47,10 +47,10 @@ class Meal {
 
 class Customer {
     constructor(name, neighborhood) {
-        this.id = ++customerId;
-        this.name = name;
-        this.neighborhoodId = neighborhood;
-        store.customers.push(this);
+      this.id = ++customerId;
+      this.name = name;
+      this.neighborhoodId = neighborhood;
+      store.customers.push(this);
     }
     deliveries() {
       return store.deliveries.filter(delivery => {
