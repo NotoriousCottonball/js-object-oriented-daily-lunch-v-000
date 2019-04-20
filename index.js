@@ -76,11 +76,9 @@ class Delivery {
         return store.customers.find(customer => customer.id === this.customerId);
     }
     neighborhood() {
-        return store.neighborhoods.find(
-            function(neighborhood) {
-                return neighborhood.id === this.neighborhoodId;
-            }.bind(this)
-    );}
+        return store.neighborhoods.find(neighborhood => neighborhood.id === this.neighborhoodId);
+      
+    }
     meal() {
         return store.meals.find(
             function(meal) {
