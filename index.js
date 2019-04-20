@@ -66,11 +66,11 @@ class Customer {
 
 class Delivery {
     constructor(meal, neighborhood, customer) {
-        this.id = ++deliveryId;
-        this.mealId = meal;
-        this.neighborhoodId = neighborhood;
-        this.customerId = customer;
-        store.deliveries.push(this);
+      this.id = ++deliveryId;
+      this.mealId = meal;
+      this.neighborhoodId = neighborhood;
+      this.customerId = customer;
+      store.deliveries.push(this);
     }
    customer() {
         return store.customers.find(
