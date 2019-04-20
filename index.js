@@ -38,8 +38,7 @@ class Meal {
       return store.deliveries.filter(delivery => delivery.mealId === this.id);
     }  
     customers() {
-      return this.deliveries().map(delivery => store.customers.find(customer => 
-        customer.id === delivery.customerId));
+      return this.deliveries().map(delivery => store.customers.find(customer => customer.id === delivery.customerId));
     }  
     static byPrice() {
       return store.meals.sort(function(a, b) {return b.price - a.price});
