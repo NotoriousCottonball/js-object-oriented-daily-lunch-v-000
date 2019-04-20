@@ -56,8 +56,7 @@ class Customer {
       return store.deliveries.filter(delivery => delivery.customerId === this.id);
     }
     meals() {
-    return this.deliveries().map(delivery => {
-      return delivery.meal();})
+    return this.deliveries().map(delivery => delivery.meal());
     }
    totalSpent(){
     let prices = this.meals().map(function(meal){return meal.price})
