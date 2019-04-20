@@ -18,9 +18,8 @@ class Neighborhood {
     }
 
    customers() {
-    return store.customers.filter(customer => {
-      return customer.neighborhoodId = this.id ;})
-  }
+    return store.customers.filter(customer => customer.neighborhoodId = this.id);
+   }
 
    meals() {
     let meals = this.customers().map(customer => {return customer.meals()});
