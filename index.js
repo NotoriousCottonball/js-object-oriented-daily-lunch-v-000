@@ -59,10 +59,9 @@ class Customer {
       return this.deliveries().map(delivery => delivery.meal());
     }
     totalSpent(){
-      let prices = this.meals().map(function(meal){return meal.price})
+      let prices = this.meals().map(meal=> meal.price);
       return prices.reduce((total, amount) => total + amount, 0)
-
-   }
+    }
 }
 
 class Delivery {
